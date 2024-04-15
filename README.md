@@ -72,7 +72,7 @@ The **F<sub>1</sub> score is ~75.9%**
 1. Install Python **3.10** or later.
 2. Install PyTorch with `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121`
 3. Install the required packages by running `pip install -r requirements.txt` in your shell of choice. Make sure you are in the project directory.
-4. Run `python slangID3.py`
+4. Run `python slangID3_DL.py`
 
 **Note:** It might take a while to load. Be patient.
 
