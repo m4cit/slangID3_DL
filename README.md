@@ -99,5 +99,4 @@ Most of the phrases come from archive.org's [Twitter Stream of June 6th](https:/
 * pandas
 * numpy
 * tqdm
-* pyinstaller
 
