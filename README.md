@@ -61,13 +61,6 @@ There is currently only one model available:
 The **F<sub>1</sub> score is ~75.9%**
 (on the test set, with the original training data)
 
-
-## How to run slangID3 DL
-1. Download the **slangID3_DL.exe** and the **.zip** file under "Releases"
-2. Unzip the **.zip** file
-3. Move **slangID3_DL.exe** to the unzipped folder
-
-**or**
    
 1. Install Python **3.10** or later.
 2. Install PyTorch with `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121` (might be different for linux)
