@@ -5,6 +5,10 @@ You can train a selection of classifiers, and print out a test set of phrases wi
 Or you can pass a phrase and see what type it, and the individual words are identified as. All the models are pre-trained, but you can re-train if needed.
 
 
+## Preprocessing
+The preprocessing script removes the slang tags, brackets, hyphens, and converts everything to lowercase.
+
+
 ## Augmentation
 I categorized the slang words as:
 * \<pex> personal expressions
@@ -35,10 +39,6 @@ I categorized the slang words as:
   * _trigger_
 
 (not all tags are available due to the small dataset)
-
-
-## Preprocessing
-The preprocessing script removes the slang tags, brackets, hyphens, and converts everything to lowercase.
 
 
 ## Issues
