@@ -61,7 +61,8 @@ There is currently only one model available:
 The **F<sub>1</sub> score is ~75.9%**
 (on the test set, with the original training data)
 
-   
+
+## How to run slangID3   
 1. Install Python **3.10** or later.
 2. Install PyTorch with `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121` (might be different for linux)
 3. Install the required packages by running `pip install -r requirements.txt` in your shell of choice. Make sure you are in the project directory.
