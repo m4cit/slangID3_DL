@@ -81,17 +81,17 @@ The **F<sub>1</sub> score is ~75.9%**
 
 ### Icon
 
-<img src='https://raw.githubusercontent.com/m4cit/slangID3/main/misc/gallery/slangID3_dl_icon.png' height="120">
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_icon.png' height="120">
 
 
 ### Prediction
 
-<img src='https://raw.githubusercontent.com/m4cit/slangID3/main/misc/gallery/slangID3_dl_pred.png' width="900">
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_pred.png' width="900">
 
 
 ### Demo
 
-<img src='https://raw.githubusercontent.com/m4cit/slangID3/main/misc/gallery/slangID3_dl_dm.png' width="900">
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_dm.png' width="900">
 
 
 ## Source of the data
