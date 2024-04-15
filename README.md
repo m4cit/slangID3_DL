@@ -2,7 +2,7 @@
 slangID3 DL tries to identify slang phrases via Deep Learning models created with PyTorch.
 
 You can train a selection of classifiers, and print out a test set of phrases with the **DEMO** button.
-Or you can pass a phrase and see what type it, and the individual words are identified as. All the models are pre-trained, but you can re-train if needed.
+Or you can pass a phrase and see what type it, and the individual words are identified as. All the available models are pre-trained, but you can re-train if needed.
 
 
 ## Preprocessing
