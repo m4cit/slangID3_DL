@@ -5,6 +5,23 @@ You can train a selection of classifiers, and print out a test set of phrases wi
 Or you can pass a phrase and see what type it, and the individual words are identified as. All the available models are pre-trained, but you can re-train if needed.
 
 
+## Gallery
+
+### Icon
+
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_icon.png' height="120">
+
+
+### Prediction
+
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_pred.png' width="900">
+
+
+### Demo
+
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_dm.png' width="900">
+
+
 ## Preprocessing
 The preprocessing script removes the slang tags, brackets, hyphens, and converts everything to lowercase.
 
@@ -70,23 +87,6 @@ The **F<sub>1</sub> score is ~75.9%**
 5. Run `python slangID3_DL.py`
 
 **Note:** It might take a while to load. Be patient.
-
-
-## Gallery
-
-### Icon
-
-<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_icon.png' height="120">
-
-
-### Prediction
-
-<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_pred.png' width="900">
-
-
-### Demo
-
-<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_dm.png' width="900">
 
 
 ## Source of the data
