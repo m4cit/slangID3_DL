@@ -22,6 +22,24 @@ Or you can pass a phrase and see what type it, and the individual words are iden
 <img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_dm.png' width="900">
 
 
+## How to run slangID3 DL
+1. Install Python **3.10** or newer.
+2. Install PyTorch with `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121`
+(might be different for linux)
+4. Install the required packages by running `pip install -r requirements.txt` in your shell of choice. Make sure you are in the project directory.
+5. Run `python slangID3_DL.py`
+
+**Note:** It might take a while to load. Be patient.
+
+
+## Usage
+You can predict with the included pre-trained models, and re-train if needed.
+
+Preprocessing is the last step before training a model.
+
+If you want to use the original dataset **_data.csv_** after some changes, or the augmented dataset **_augmented_data.csv_**, use the preprocessing function before training.
+
+
 ## Preprocessing
 The preprocessing script removes the slang tags, brackets, hyphens, and converts everything to lowercase.
 
@@ -62,14 +80,6 @@ I categorized the slang words as:
 The training dataset is still too small, resulting in overfitting (after augmentation).
 
 
-## Usage
-You can predict with the included pre-trained models, and re-train if needed.
-
-Preprocessing is the last step before training a model.
-
-If you want to use the original dataset **_data.csv_** after some changes, or the augmented dataset **_augmented_data.csv_**, use the preprocessing function before training.
-
-
 ## Performance
 There is currently only one model available:
 
@@ -77,16 +87,6 @@ There is currently only one model available:
 
 The **F<sub>1</sub> score is ~75.9%**
 (on the test set, with the original training data)
-
-
-## How to run slangID3 DL
-1. Install Python **3.10** or newer.
-2. Install PyTorch with `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121`
-(might be different for linux)
-4. Install the required packages by running `pip install -r requirements.txt` in your shell of choice. Make sure you are in the project directory.
-5. Run `python slangID3_DL.py`
-
-**Note:** It might take a while to load. Be patient.
 
 
 ## Source of the data
