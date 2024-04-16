@@ -40,6 +40,19 @@ Preprocessing is the last step before training a model.
 If you want to use the original dataset **_data.csv_** after some changes, or the augmented dataset **_augmented_data.csv_**, use the preprocessing function before training.
 
 
+## Performance
+There is currently only one model available:
+
+* Neural Network with 2 linear layers
+
+The **F<sub>1</sub> score is ~75.9%**
+(on the test set, with the original training data)
+
+
+## Issues
+The training dataset is still too small, resulting in overfitting (after augmentation).
+
+
 ## Preprocessing
 The preprocessing script removes the slang tags, brackets, hyphens, and converts everything to lowercase.
 
@@ -74,19 +87,6 @@ I categorized the slang words as:
   * _trigger_
 
 (not all tags are available due to the small dataset)
-
-
-## Issues
-The training dataset is still too small, resulting in overfitting (after augmentation).
-
-
-## Performance
-There is currently only one model available:
-
-* Neural Network with 2 linear layers
-
-The **F<sub>1</sub> score is ~75.9%**
-(on the test set, with the original training data)
 
 
 ## Source of the data
