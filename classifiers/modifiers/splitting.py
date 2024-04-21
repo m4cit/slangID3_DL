@@ -13,27 +13,34 @@ else:
 # loading data
 data = pd.read_csv (r'./classifiers/modifiers/data/processed_data.csv')
 
-# vectorize data #############################################################################
-vectorizer = TfidfVectorizer(dtype='float64', min_df=1)
-X = vectorizer.fit_transform(data['phrase']).toarray()
-le = LabelEncoder()
-y = le.fit_transform(data['type'])
-y = np.array(y, dtype=np.int64)
+# train test split ###########################################################################
+train, test = train_test_split(data, test_size=0.1, random_state=42)
+X_train = [x for x in train['phrase']]
+y_train = [x for x in train['type']]
+X_test = [x for x in test['phrase']]
+y_test = [x for x in test['type']]
 
-# print(y) -> shows the encoded labels. 1 for slang, 0 for formal.
-# print(le.inverse_transform([0])) -> 'formal'
-# print(le.inverse_transform(y)) -> shows the decoded labels.
+org_X_train = X_train
+org_X_test = X_test
+org_y_train = y_train
+org_y_test = y_test
 ##############################################################################################
 
-# train test split ###########################################################################
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
+# vectorize data #############################################################################
+vectorizer = TfidfVectorizer(dtype='float64', min_df=1)
+le = LabelEncoder()
 
-# second split of unvectorized data to print out the phrases
-train, test = train_test_split(data, test_size=0.1, random_state=42)
-org_X_train = [x for x in train['phrase']]
-org_X_test = [x for x in test['phrase']]
-org_y_train = [x for x in train['type']]
-org_y_test = [x for x in test['type']]
+X_train = vectorizer.fit_transform(X_train).toarray()
+y_train = le.fit_transform(y_train)
+y_train = np.array(y_train, dtype=np.int64)
+
+X_test = vectorizer.transform(X_test).toarray()
+y_test = le.transform(y_test)
+y_test = np.array(y_test, dtype=np.int64)
+
+# print(y_train) -> shows the encoded labels. 1 for slang, 0 for formal.
+# print(le.inverse_transform([0])) -> 'formal'
+# print(le.inverse_transform(y_train)) -> shows the decoded labels.
 ##############################################################################################
 
 # convert train and test to tensors ##########################################################
