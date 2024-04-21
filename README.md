@@ -45,13 +45,12 @@ There is currently only one model available:
 
 * Neural Network with 2 linear layers
 
-The **F<sub>1</sub> score is ~75.9%**
+The **F<sub>1</sub> score is ~71.4%**
 (on the test set, with the original training data)
 
 
 ## Issues
 - The training dataset is still too small, resulting in overfitting (after augmentation).
-- The splitting is not quite correctly implemented right now.
 
 
 ## Preprocessing
