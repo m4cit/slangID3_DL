@@ -50,7 +50,8 @@ The **F<sub>1</sub> score is ~75.9%**
 
 
 ## Issues
-The training dataset is still too small, resulting in overfitting (after augmentation).
+- The training dataset is still too small, resulting in overfitting (after augmentation).
+- The splitting is not quite correctly implemented right now.
 
 
 ## Preprocessing
