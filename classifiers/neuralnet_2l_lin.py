@@ -46,9 +46,9 @@ def train_nn_2l_lin():
     progressbar = tqdm(total=epochs)
     
     for epoch in range(epochs):
-        optimizer.zero_grad()
         y_pred = model(X_train_tensor)
         loss = loss_fn(y_pred, y_train_tensor)
+        optimizer.zero_grad()
         loss.backward()
         optimizer.step()
         progressbar.update()
