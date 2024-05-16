@@ -19,7 +19,7 @@ Or you can pass a phrase and see what type it, and the individual words are iden
 
 ### Demo
 
-<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_dm.png' width="900">
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_demo.png' width="900">
 
 
 ## How to run slangID3 DL
