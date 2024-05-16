@@ -15,7 +15,7 @@ else:
 
 
 input_features = len(X_train_tensor[1]) # for input in model
-output_size = 2 # formal or slang
+output_size = 1 # formal or slang
 hidden_size = 50 # hidden layers
 epochs = 30
 
@@ -34,7 +34,7 @@ class NeuralNet_2l_lin(nn.Module):
 model = NeuralNet_2l_lin().to(device).double()
 
 # loss function and optimizer ################################################################
-loss_fn = nn.NLLLoss()
+loss_fn = nn.BCELoss()
 optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01) # learning rate
 ##############################################################################################
 
@@ -47,7 +47,7 @@ def train_nn_2l_lin():
     
     for epoch in range(epochs):
         y_pred = model(X_train_tensor)
-        loss = loss_fn(y_pred, y_train_tensor)
+        loss = loss_fn(y_pred.flatten(), y_train_tensor.to(torch.float64))
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
@@ -78,7 +78,7 @@ def dm_nn_2l_lin():
             orgPhrase = f'[{i+1}] Phrase: {org_X_test[i]}'
             pred_list.append(orgPhrase)
             print(orgPhrase)
-            if torch.max(y_pred[i]).item() == 1:
+            if torch.round(y_pred[i]).item() == 1:
                 pr = "slang"
                 if pr != str(org_y_test[i]):
                     count += 1
@@ -94,7 +94,7 @@ def dm_nn_2l_lin():
             print(actual)
         errors = f'Wrong predictions: {count}'    
         # f1 score #####
-        pred_list_f1 = [torch.max(i) for i in y_pred]
+        pred_list_f1 = [torch.round(i) for i in y_pred]
         f1 = binary_f1_score(torch.tensor(pred_list_f1).cpu(), y_test_tensor.cpu(), threshold=0.5)
         f1_score = f'F1 score: {f1}'
         f1_and_pred_list = ['NeuralNet_2l_lin:', f'*{f1_score}', f'*{errors}', '']
@@ -129,19 +129,19 @@ def predictor_nn_2l_lin(input):
         preds.append(f'NeuralNet_2l_lin:\n Phrase:\t         {input[0]}')
         with torch.inference_mode():
             type_prediction = model(torch.from_numpy(input_phrase).to(device))
-        if torch.max(type_prediction).item() == 1:
+        if torch.round(type_prediction).item() == 1:
             pred = ' |--Prediction:  slang\n |'
-        elif torch.max(type_prediction).item() == 0:
+        elif torch.round(type_prediction).item() == 0:
             pred = ' |--Prediction:  formal\n |'
         preds.append(pred)
         # individual word eval
         for i in range(len(words)):
             type_prediction_word = model(torch.from_numpy(words_vect).to(device))
-            if torch.max(type_prediction_word[i]).item() == 1:
+            if torch.round(type_prediction_word[i]).item() == 1:
                 w_pred = '\n Prediction:  slang'
                 clean = words[i].replace('\n','')
                 preds.append(f'\n [{i+1}] Word:    {clean}   {w_pred}')
-            elif torch.max(type_prediction_word[i]).item() == 0:
+            elif torch.round(type_prediction_word[i]).item() == 0:
                 w_pred = '\n Prediction:  formal'
                 clean = words[i].replace('\n','')
                 preds.append(f'\n [{i+1}] Word:    {clean}   {w_pred}')
