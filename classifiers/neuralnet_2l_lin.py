@@ -95,7 +95,7 @@ def dm_nn_2l_lin():
         errors = f'Wrong predictions: {count}'    
         # f1 score #####
         pred_list_f1 = [torch.round(i) for i in y_pred]
-        f1 = binary_f1_score(torch.tensor(pred_list_f1).cpu(), y_test_tensor.cpu(), threshold=0.5)
+        f1 = binary_f1_score(torch.tensor(pred_list_f1).cpu(), y_test_tensor.cpu())
         f1_score = f'F1 score: {f1}'
         f1_and_pred_list = ['NeuralNet_2l_lin:', f'*{f1_score}', f'*{errors}', '']
         ################
