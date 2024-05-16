@@ -45,7 +45,7 @@ There is currently only one model available:
 
 * Neural Network with 2 linear layers
 
-The **F<sub>1</sub> score is ~71.4%**
+The **F<sub>1</sub> score is ~63.6%**
 (on the test set, with the original training data)
 
 
