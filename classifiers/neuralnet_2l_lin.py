@@ -34,7 +34,7 @@ class NeuralNet_2l_lin(nn.Module):
 model = NeuralNet_2l_lin().to(device).double()
 
 # loss function and optimizer ################################################################
-loss_fn = nn.BCELoss()
+loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01) # learning rate
 ##############################################################################################
 
