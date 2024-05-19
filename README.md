@@ -41,11 +41,12 @@ If you want to use the original dataset **_data.csv_** after some changes, or th
 
 
 ## Performance
-There is currently only one model available:
+There is currently two models available:
 
-* Neural Network with 2 linear layers
+* **NeuralNet_2l_lin:** Neural Network with 2 linear layers
+* **NeuralNet_4l_relu_lin:** Neural Network with 4 linear layers and 3 ReLU layers
 
-The **F<sub>1</sub> score is ~63.6%**
+The best **F<sub>1</sub> score is ~68.9% with model NeuralNet_2l_lin**
 (on the test set, with the original training data)
 
 
