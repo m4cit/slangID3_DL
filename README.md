@@ -47,7 +47,8 @@ There is currently two models available:
 * **NeuralNet_4l_relu_lin:** Neural Network with 4 linear layers and 3 ReLU layers
 
 The best **F<sub>1</sub> score is ~71.4% with model NeuralNet_2l_lin**
-(on the test set, with the original training data after 100 epochs)
+
+**Note:** Score for the test set after training for 100 epochs with the original training data.
 
 
 ## Issues
