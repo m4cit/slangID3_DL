@@ -53,6 +53,7 @@ The best **F<sub>1</sub> score is ~71.4% with model NeuralNet_2l_lin**
 
 ## Issues
 - The training dataset is still too small, resulting in overfitting (after augmentation).
+- Reproducibility is an issue with regard to training.
 
 
 ## Preprocessing
