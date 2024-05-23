@@ -182,7 +182,7 @@ if __name__ == '__main__':
     nn_checkbox_1 = ctk.CTkCheckBox(checkbox_frame, command=lambda: nn_checkbox_1.get(), text="NeuralNet (2 linear layers)", font=("Calibri", 20,"bold"), text_color="white", corner_radius=10, fg_color="#f76700", hover_color="#FFA300", border_color="white")
     nn_checkbox_1.grid(row=1, column=0, padx=10, pady=(10,0), sticky="nsw")
 
-    nn_checkbox_2 = ctk.CTkCheckBox(checkbox_frame, command=lambda: nn_checkbox_1.get(), text="NeuralNet (4 linear layers \nwith ReLU for each)", font=("Calibri", 20,"bold"), text_color="white", corner_radius=10, fg_color="#f76700", hover_color="#FFA300", border_color="white")
+    nn_checkbox_2 = ctk.CTkCheckBox(checkbox_frame, command=lambda: nn_checkbox_1.get(), text="NeuralNet (4 linear layers \nand 3 ReLU layers)", font=("Calibri", 20,"bold"), text_color="white", corner_radius=10, fg_color="#f76700", hover_color="#FFA300", border_color="white")
     nn_checkbox_2.grid(row=2, column=0, padx=10, pady=(10,0), sticky="nsw")
     
     select_all_checkbox = ctk.CTkCheckBox(checkbox_frame, command=lambda: (nn_checkbox_1.toggle(), nn_checkbox_2.toggle()), text="All models", font=("Calibri", 20,"bold"), text_color="white", border_color="red", corner_radius=10, fg_color="#b6c2fe", hover_color="#99c8fc")
