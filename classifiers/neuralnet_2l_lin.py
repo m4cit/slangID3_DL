@@ -72,7 +72,6 @@ def train_nn_2l_lin():
 def dm_nn_2l_lin():
     # loading trained model
     try:
-        
         loaded_model = NeuralNet_2l_lin()
         loaded_model.load_state_dict(torch.load('./classifiers/models/NeuralNet_2l_lin.pth'))
         loaded_model.to(device).double()
@@ -125,7 +124,6 @@ def dm_nn_2l_lin():
 def predictor_nn_2l_lin(input):
     try:
         # loading trained model
-        
         loaded_model = NeuralNet_2l_lin()
         loaded_model.load_state_dict(torch.load('./classifiers/models/NeuralNet_2l_lin.pth'))
         loaded_model.to(device).double()
