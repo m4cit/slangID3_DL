@@ -5,7 +5,7 @@ from torcheval.metrics.functional import binary_f1_score
 import torch
 from torch import nn
 from torch.nn import functional as F
-from tqdm import tqdm
+import copy
 
 
 if torch.cuda.is_available():
@@ -39,32 +39,42 @@ class NeuralNet_4l_relu_lin(nn.Module):
         return F.sigmoid(x)
 ##############################################################################################
 
-model = NeuralNet_4l_relu_lin().to(device).double()
-
-# loss function and optimizer ################################################################
-loss_fn = nn.BCELoss()
-optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01) # learning rate
-##############################################################################################
-
 # function to train the model ################################################################
 def train_nn_4l_relu_lin():
+    if device == 'cpu':
+        torch.manual_seed(0)
+    else:
+        torch.cuda.manual_seed(0)
+    model = NeuralNet_4l_relu_lin().to(device).double()
+    loss_fn = nn.BCELoss()
+    optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01) # learning rate
+    
+    # training
     model.train()
     message = 'Training NeuralNet_4l_relu_lin model...'
     print(message)
-    progressbar = tqdm(total=epochs)
+
+    best_model_state_dict = model.state_dict()
     
     for epoch in range(epochs):
+        print(f'Epoch {epoch + 1}:')
         y_pred = model(X_train_tensor)
         loss = loss_fn(y_pred.flatten(), y_train_tensor.to(torch.float64))
+        print(f'Loss: {loss}\n')
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        progressbar.update()
+        if loss.item() <= 0.1:
+            best_model_state_dict = copy.deepcopy(model.state_dict())
+            print(f'Stopping at Epoch {epoch + 1}')
+            break
+        else:
+            best_model_state_dict = best_model_state_dict
     
     # saving trained classifier
     with open('./classifiers/models/NeuralNet_4l_relu_lin.pth', 'wb') as f:
+        print('Saving model...\n')
         torch.save(model.state_dict(), f)
-    progressbar.close()
 ##############################################################################################
 
 # print out test set with predictions and actual labels ######################################
