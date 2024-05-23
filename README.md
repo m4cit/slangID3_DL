@@ -48,7 +48,7 @@ There is currently two models available:
 
 The best **F<sub>1</sub> score is ~71.4% with model NeuralNet_2l_lin**
 
-**Note:** Score for the test set after training for 100 epochs with the original training data.
+**Note:** Score on the test set with the best parameters within 100 epochs of training with the original training data.
 
 
 ## Issues
