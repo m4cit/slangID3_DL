@@ -14,12 +14,12 @@ Or you can pass a phrase and see what type it, and the individual words are iden
 
 ### Prediction
 
-<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_pred.png' width="900">
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_pd.png' width="900">
 
 
 ### Demo
 
-<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_demo.png' width="900">
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_dm.png' width="900">
 
 
 ## How to run slangID3 DL
