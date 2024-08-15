@@ -1,11 +1,10 @@
 # slangID3 DL
 <img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_icon.png' align="left" height="120">
 slangID3 DL tries to identify slang phrases via Deep Learning models created with PyTorch.
-<br clear="left">
 
 You can train a selection of classifiers, and print out a test set of phrases with the **DEMO** button.
 Or you can pass a phrase and see what type it, and the individual words are identified as. All the available models are pre-trained, but you can re-train if needed.
-
+<br clear="left">
 
 ## Gallery
 ### Prediction
