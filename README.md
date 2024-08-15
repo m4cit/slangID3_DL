@@ -27,7 +27,7 @@ Or you can pass a phrase and see what type it, and the individual words are iden
    
    or download the latest [source code](https://github.com/m4cit/slangID3_DL/releases).
 
-3. Install [PyTorch](https://pytorch.org/get-started/locally/)
+3. Install [PyTorch](https://pytorch.org/get-started/locally/).
 
    3.1 Either with CUDA
       - Windows:
@@ -49,12 +49,12 @@ Or you can pass a phrase and see what type it, and the individual words are iden
          > pip3 install torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu
          >```
    
-4. Navigate to the slangID3_DL main directory
+4. Navigate to the slangID3_DL main directory.
    >```
    > cd slangID3_DL
    >```
 
-5. Install dependencies
+5. Install dependencies.
    >```
    > pip install -r requirements.txt
    >```
