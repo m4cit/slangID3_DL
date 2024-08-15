@@ -23,12 +23,6 @@ Or you can pass a phrase and see what type it, and the individual words are iden
 
 
 ## How to run slangID3 DL
-1. Install Python **3.10** or newer.
-2. Install PyTorch with `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121`
-(might be different for linux)
-4. Install the required packages by running `pip install -r requirements.txt` in your shell of choice. Make sure you are in the project directory.
-5. Run `python slangID3_DL.py`
-
 1. Install **Python 3.10** or newer.
 
 2. Clone the repository with
