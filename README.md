@@ -1,5 +1,5 @@
 # slangID3 DL
-<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_icon.png' align="left" height="120">
+<img src='https://raw.githubusercontent.com/m4cit/slangID3_DL/main/misc/gallery/slangID3_dl_icon.png' align="left" height="150">
 slangID3 DL tries to identify slang phrases via Deep Learning models created with PyTorch.
 
 You can train a selection of classifiers, and print out a test set of phrases with the **DEMO** button.
